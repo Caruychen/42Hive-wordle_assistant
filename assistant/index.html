@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<title>Wordle</title>
+		<style>
+			html, body {
+				width: 100%
+				margin-top: 20px;
+			}
+			div.inputElement {
+				margin-bottom: 20px;
+				display: flex;
+			}
+			.letterTable {
+				display: flex;
+				flex-wrap: nowrap;
+				margin-left: 20px;
+			}
+			.letterTable > div {
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				margin-right: 10px;
+				background-color: rgb(211, 211, 211);
+				text-align: center;
+				font-size: 20px;
+			}
+			#wordList {
+				width: 80%;
+				word-wrap: normal;
+			}
+			input[type="text"] {
+					text-transform: lowercase;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+		</header>
+		<main>
+		<div>
+			<h1>Wordle Assistant</h1>
+		</div>
+		<div id="inputSection">
+			<div class="inputElement" id="input1">
+				<input type="text" id="word1" maxLength=5>
+				<button onclick="addWord('input1')">Add</button>
+				<div class="letterTable">
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+				</div>
+				<button onclick="clearWord('input1')">clear</button>
+			</div>
+			<div class="inputElement" id="input2">
+				<input type="text" id="word2" maxLength=5>
+				<button onclick="addWord('input2')">Add</button>
+				<div class="letterTable">
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+				</div>
+				<button onclick="clearWord('input2')">clear</button>
+			</div>
+			<div class="inputElement" id="input3">
+				<input type="text" id="word3" maxLength=5>
+				<button onclick="addWord('input3')">Add</button>
+				<div class="letterTable">
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+				</div>
+				<button onclick="clearWord('input3')">clear</button>
+			</div>
+			<div class="inputElement" id="input4">
+				<input type="text" id="word4" maxLength=5>
+				<button onclick="addWord('input4')">Add</button>
+				<div class="letterTable">
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+				</div>
+				<button onclick="clearWord('input4')">clear</button>
+			</div>
+			<div class="inputElement" id="input5">
+				<input type="text" id="word5" maxLength=5>
+				<button onclick="addWord('input5')">Add</button>
+				<div class="letterTable">
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+				</div>
+				<button onclick="clearWord('input5')">clear</button>
+			</div>
+			<div class="inputElement" id="input6">
+				<input type="text" id="word6" maxLength=5>
+				<button onclick="addWord('input6')">Add</button>
+				<div class="letterTable">
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+					<div class="0" onclick="cycleLetterState(this)"></div>
+				</div>
+				<button onclick="clearWord('input6')">clear</button>
+			</div>
+		</div>
+		<div id="wordList"></div>
+		</main>
+		<script type="module" src="./app.js"></script>
+	</body>
+</html>
